@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Analysis for {{ticker}}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .data-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .data-item {
+            width: 48%;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .data-item h2 {
+            margin-top: 0;
+        }
+        .plot-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .plot-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Stock Analysis for {{ticker}}</h1>
+
+        <div class="data-section">
+            <div class="data-item">
+                <h2>Average: {{avg}}</h2>
+            </div>
+            <div class="data-item">
+                <h2>Variance: {{var}}</h2>
+            </div>
+            <div class="data-item">
+                <h2>Standard Deviation: {{std}}</h2>
+            </div>
+            <div class="data-item">
+                <h2>Moving Average (5 days): {{ma5}}</h2>
+            </div>
+            <div class="data-item">
+                <h2>Moving Average (10 days): {{ma10}}</h2>
+            </div>
+            <div class="data-item">
+                <h2>Moving Average (20 days): {{ma20}}</h2>
+            </div>
+            <div class="data-item">
+                <h2>Moving Average (50 days): {{ma50}}</h2>
+            </div>
+            <div class="data-item">
+                <h2>Moving Average (100 days): {{ma100}}</h2>
+            </div>
+            <div class="data-item">
+                <h2>Moving Average (200 days): {{ma200}}</h2>
+            </div>
+            <div class="data-item">
+                <h2>Omega: {{omega}}</h2>
+            </div>
+            <div class="data-item">
+                <h2>Beta: {{beta}}</h2>
+            </div>
+            <div class="data-item">
+                <h2>Alpha: {{alpha}}</h2>
+            </div>
+            <div class="data-item">
+                <h2>Sigma Squared: {{sigma_sq}}</h2>
+            </div>
+            <div class="data-item">
+                <h2>Future Return: {{future_return}}</h2>
+            </div>
+            <div class="data-item">
+                <h2>Future Volatility: {{future_volatility}}</h2>
+            </div>
+        </div>
+
+        <div class="plot-container">
+            <img src="data:image/png;base64,{{plot}}" alt="Stock Analysis Plot">
+        </div>
+
+        <a href="/">Go Back</a>
+    </div>
+
+</body>
+</html>
