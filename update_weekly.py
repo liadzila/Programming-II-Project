@@ -3,7 +3,7 @@ import functions_package
 import yfinance as yf
 
 username = 'doadmin'
-password = 'AVNS_MtZBitzAUUXU-z8-BNt'
+password = 
 host = 'usi-student-4m-do-user-17534849-0.d.db.ondigitalocean.com'
 port = 25060
 database = 'defaultdb'
